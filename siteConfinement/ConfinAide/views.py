@@ -13,5 +13,5 @@ def inscription(request):
     return render(request, "inscription.html")    
 
 def panier(request):
-    if(request.method == "POST"):
+    if request.method == "POST":
         panier.Update(request)
