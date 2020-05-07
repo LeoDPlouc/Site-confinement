@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
+from ..pythonCode import panier
 
 
 def index(request):
@@ -10,3 +11,7 @@ def connexion(request):
 
 def inscription(request):
     return render(request, "inscription.html")    
+
+def panier(request):
+    if(request.method == "POST"):
+        panier.Update(request)
