@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect
 from ..pythonCode import panier
 from django.contrib.auth import authenticate, get_user_model, login, logout
+=======
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
+from pythonCode import panier as pan
+>>>>>>> d6f2f5008a9708aaca99a42ea826b782104906d1
 
 from .forms import UserLoginForm, UserRegisterForm
 
@@ -16,6 +23,7 @@ def index(request):
 
 def panier(request):
     if request.method == "POST":
+<<<<<<< HEAD
         panier.Update(request)
         
 def connexion(request):
@@ -57,3 +65,10 @@ def insciption(request):
 def deconnexion(request):
     logout(request)
     return redirect('/')
+=======
+        pan.Update(request)
+        return HttpResponseRedirect(reverse('commandes'))
+        
+def commandes(request):
+    return render(request, "listProduit.html")
+>>>>>>> d6f2f5008a9708aaca99a42ea826b782104906d1

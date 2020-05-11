@@ -61,3 +61,23 @@ div.radio {
   outline: none;
 }
 
+.quantity {
+  width: 4.5rem;
+  margin-top: 1.5rem;
+}
+
+.row.center {
+  margin-top: 3rem;
+}
+
+.btn.btn-primary.center-button {
+}
+
+.span-filler {
+  width: 100%;
+}
+
+.btn.btn-danger.btn-right {
+  float: right;
+}
+
