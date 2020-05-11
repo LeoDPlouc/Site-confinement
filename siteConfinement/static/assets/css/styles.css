@@ -16,3 +16,6 @@
   margin: 1rem;
 }
 
+.hidden{
+  visibility: hidden;
+}

@@ -61,3 +61,8 @@ div.radio {
   outline: none;
 }
 
+.quantity {
+  width: 4.5rem;
+  margin-top: 1.5rem;
+}
+

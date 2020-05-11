@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Python</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Login-Form.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Product-List.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark">
+        <div class="container-fluid"><a class="navbar-brand" href="#">ConfinAide</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-md-flex d-lg-flex d-xl-flex justify-content-md-end justify-content-lg-end justify-content-xl-end"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><button class="btn btn-danger d-lg-flex" type="button">Déconnexion</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="center">
+        <div class="row product-list">
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Lait</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">11,60€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">GrandLait Bio Demi-écrémé 6x1L<br><br></p>
+                            <form action="/panier" method="POST">
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="q" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="text" class="hidden" name="p" value="lait">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Eau</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">3,79€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Eau de source plate Cristaline 1,5L,&nbsp;<br>Pack 6 bouteilles<br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Pâtes</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">1,59€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">PANZANI - Coquillettes&nbsp;<br>Sachet de 500gr<br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row product-list">
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Riz</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">3,30€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">1Kg de riz uncle ben's<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="0" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Farine</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">0,89€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Farine de blé T45 Francine&nbsp;<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Savon</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">2,73€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Savon de marseille 100Gr<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row product-list">
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Lingettes</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">10,20€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">3x72 Lingettes Sanytol<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Céréales</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">2,50€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Céréales pétales de blé complet<br>Boîte de 300Gr</p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Sucre</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">1,21€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Sucre blanc 900Gr Daddy<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row product-list">
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Semoule</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">6€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">1Kg de semoule tipiak<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Sel</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">17,39€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">1Kg de Sel La Baleine<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Huile</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">7,52€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">1L D'huiles Puget<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row product-list">
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Lait</a>&nbsp;en poudre</h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">18,90€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Pour bébé, 1Kg 800Gr Gallia<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Gâteaux secs</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">1,30€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Sachet de Gateaux breton&nbsp;<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 product-item">
+                <div class="product-container">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><a href="#">Boîte de conserve</a></h2>
+                        </div>
+                        <div class="col-4">
+                            <p class="product-price">1,59€</p>
+                        </div>
+                    </div>
+                    <div class="product-rating"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="product-description">Conserve de légumes (Haricot vert, Petits pois, Carotte)<br><br></p>
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
+                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
