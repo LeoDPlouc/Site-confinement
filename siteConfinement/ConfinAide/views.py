@@ -15,3 +15,6 @@ def inscription(request):
 def panier(request):
     if request.method == "POST":
         panier.Update(request)
+
+def commandes(request):
+    return render(request, "listProduit.htlm")
