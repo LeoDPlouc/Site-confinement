@@ -17,4 +17,4 @@ def panier(request):
         panier.Update(request)
 
 def commandes(request):
-    return render(request, "listProduit.htlm")
+    return render(request, "listProduit.html")
