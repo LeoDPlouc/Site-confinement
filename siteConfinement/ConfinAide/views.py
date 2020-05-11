@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
-from ..pythonCode import panier
+from pythonCode import *
 
 
 def index(request):
