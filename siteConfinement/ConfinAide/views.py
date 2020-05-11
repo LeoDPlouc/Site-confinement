@@ -1,5 +1,6 @@
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
 from pythonCode import panier as pan
 
 
@@ -15,7 +16,7 @@ def inscription(request):
 def panier(request):
     if request.method == "POST":
         pan.Update(request)
-        return commandes(request)
-
+        return HttpResponseRedirect(reverse('commandes'))
+        
 def commandes(request):
     return render(request, "listProduit.html")
