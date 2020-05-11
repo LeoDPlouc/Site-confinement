@@ -2,6 +2,6 @@ from django.http import HttpRequest
 
 def Update(request):
     p = request.POST["p"]
-    n = request.POST["n"]
+    n = request.POST["q"]
 
-    request.session[p] = int(request.session[p]) + n
+    request.session[p] = str(int(request.session.get(p,0)) + int(n))

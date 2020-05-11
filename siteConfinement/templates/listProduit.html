@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">GrandLait Bio Demi-écrémé 6x1L<br><br></p>
-                            <form action="/panier" method="POST">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
                                     <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="q" class="quantity" min="1" placeholder="0"></div>

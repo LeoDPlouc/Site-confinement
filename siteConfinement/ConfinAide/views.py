@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
-from pythonCode import *
+from pythonCode import panier as pan
 
 
 def index(request):
@@ -14,7 +14,8 @@ def inscription(request):
 
 def panier(request):
     if request.method == "POST":
-        panier.Update(request)
+        pan.Update(request)
+        return commandes(request)
 
 def commandes(request):
     return render(request, "listProduit.html")
