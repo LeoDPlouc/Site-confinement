@@ -1,23 +1,20 @@
 
-from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, redirect
-from ..pythonCode import panier, forms
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
 from django.urls import reverse
 from pythonCode import panier as pan
-
-
-from .forms import UserLoginForm, UserRegisterForm
+from pythonCode.forms import UserLoginForm, UserRegisterForm
 
 def index(request):
     return HttpResponse("Alors, on a le covid?")
 
 def panier(request):
     if request.method == "POST":
-
-        panier.Update(request)
+        pan.Update(request)
+        return HttpResponseRedirect(reverse('commandes'))
+    if request.method == "GET":
+        return render(request, "panier.html")
         
 def connexion(request):
     if request.method == "POST":
@@ -43,4 +40,3 @@ def deconnexion(request):
 
 def commandes(request):
     return render(request, "listProduit.html")
-
