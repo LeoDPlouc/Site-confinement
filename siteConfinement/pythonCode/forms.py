@@ -17,7 +17,7 @@ def Verification(request):
     else: return False
         
     
-def Insciption (request):
+def Inscription (request):
     name = request.POST["name-input-field"]
     first_name = request.POST["firstname-input-field"]
     mail = request.POST["email-input-field"]
