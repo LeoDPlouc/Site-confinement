@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from pythonCode import panier as pan
+from pythonCode import panier as pan, forms, commande
 from pythonCode.forms import UserLoginForm, UserRegisterForm
 
 def index(request):
@@ -39,4 +39,12 @@ def deconnexion(request):
         HttpResponseRedirect(reverse("connexion"))
 
 def commandes(request):
-    return render(request, "listProduit.html")
+    if request.method == "GET":
+        return render(request, "listProduit.html")
+    if request.method == "POST":
+        test = commande.Validation(request)
+        if(test):
+            HttpResponseRedirect(reverse("commandes"))
+        else:
+            HttpResponseRedirect(reverse("connexion"))
+    

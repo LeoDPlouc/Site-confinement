@@ -1,7 +1,4 @@
 from django.http import HttpRequest
-from django.contrib.auth import authenticate, login, get_user_model
-from django import forms
-from django import models
 from Client.models import Client
 
 
@@ -18,7 +15,7 @@ def Verification(request):
     else: return False
         
     
-def Insciption (request):
+def Inscription (request):
     name = request.POST["name-input-field"]
     first_name = request.POST["firstname-input-field"]
     mail = request.POST["email-input-field"]
