@@ -23,15 +23,18 @@ def connexion(request):
             HttpResponseRedirect(reverse("commandes"))
         else:
             HttpResponseRedirect(reverse("connexion"))
-            
+    if request.method == "GET":
+        return render(request, "connexion.html")
     
 def inscription(request):
     if request.method == "POST":
         test = forms.Inscription(request)
         if(test):
-            HttpResponseRedirect(reverse("commandes"))
+            return HttpResponseRedirect(reverse("commandes"))
         else:
-            HttpResponseRedirect(reverse("inscription"))
+            return HttpResponseRedirect(reverse("inscription"))
+    if request.method == "GET":
+        return render(request, "inscription.html")
 
 def deconnexion(request):
     if request.method == "POST":
