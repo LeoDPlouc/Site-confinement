@@ -33,7 +33,7 @@
             {%if p.q != 0%}
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <div><span>{{p.nom}}: 11€60; Quantité: {{p.q}}; Prix: 23€20</span><span class="span-filler"></span><a href="/ConfinAide/delPanier/?p={{p.nom}}"><button class="btn btn-danger btn-right" type="button">Supprimer</button></a></div>
+                        <div><span>{{p.nom}}: {{p.prixU}} €; Quantité: {{p.q}}; Prix: {{p.prixT}} €</span><span class="span-filler"></span><a href="/ConfinAide/delPanier/?p={{p.nom}}"><button class="btn btn-danger btn-right" type="button">Supprimer</button></a></div>
                     </li>
                 </ul>
             {%endif%}

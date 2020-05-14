@@ -6,6 +6,7 @@ from django.urls import reverse
 from pythonCode import panier as pan
 from pythonCode import forms
 from django.template import Context
+from .models import Produit
 
 def index(request):
     return HttpResponse("Alors, on a le covid?")
@@ -16,8 +17,10 @@ def panier(request):
         return HttpResponseRedirect(reverse('commandes'))
     if request.method == "GET":
         c = list()
-        for p in ["legume", "gateau", "laitpoudre", "huile", "sel", "semoule", "sucre", "cereale", "lingette", "savon", "farine", "riz", "pate", "eau", "lait"]: 
-            c.append({"nom": p , "q" : request.session.get(p,0)})
+        for p in ["legume", "gateau", "laitpoudre", "huile", "sel", "semoule", "sucre", "cereale", "lingette", "savon", "farine", "riz", "pate", "eau", "lait"]:
+            prix =  Produit.objects.get(name=p).prix
+            q = request.session.get(p,0)
+            c.append({"nom": p , "q" : q, "prixU": prix , "prixT" : float(prix) * int(q)})
         return render(request, "panier.html", {"produits" : c})
         
 def connexion(request):
