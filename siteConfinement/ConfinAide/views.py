@@ -25,6 +25,7 @@ def connexion(request):
             HttpResponseRedirect(reverse("connexion"))
     if request.method == "GET":
         return render(request, "connexion.html")
+            
     
 def inscription(request):
     if request.method == "POST":
