@@ -26,6 +26,8 @@
     </nav>
     <div class="row center">
         <div class="col">
+        {%for p in request.session.keys%}
+            {%if p in ["legume", "gateau", "laitpoudre", "huile", "sel", "semoule", "sucre", "cereale", "lingette", "savon", "farine", "riz", "pate", "eau", "lait"] %}
             <ul class="list-group">
                 <li class="list-group-item">
                     <div><span>Lait: 11€60; Quantité: 2; Prix: 23€20</span><span class="span-filler"></span><button class="btn btn-danger btn-right" type="button">Supprimer</button></div>
