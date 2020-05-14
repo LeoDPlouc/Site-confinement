@@ -49,3 +49,7 @@ def deconnexion(request):
 
 def commandes(request):
     return render(request, "listProduit.html")
+
+def delPanier(request):
+    pan.Delete(request)
+    return HttpResponseRedirect(reverse("panier"))
