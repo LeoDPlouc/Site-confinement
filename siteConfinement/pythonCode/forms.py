@@ -6,7 +6,7 @@ from ConfinAide.models import Client
 
 
 def Verification(request):
-    mail = request.POST.get("mail",request.session.get("id_mail",None))
+    mail = request.POST.get("email",request.session.get("id_mail",None))
     password = request.POST.get("password",request.session.get("id_password",None))
     if(mail == None or password == None): return False
     test = Client.objects.filter(mail=mail,password=password)
@@ -37,8 +37,8 @@ def Inscription (request):
     
     
 def Deconnexion(request):
-    request.session.delattr("id_mail")
-    request.session.delattr("id_password")
+    request.session["id_mail"] = None
+    request.session["id_password"] = None
     
 
 

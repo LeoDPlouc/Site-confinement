@@ -38,9 +38,9 @@ def inscription(request):
         return render(request, "inscription.html")
 
 def deconnexion(request):
-    if request.method == "POST":
-        forms.deconnexion(request)
-        HttpResponseRedirect(reverse("connexion"))
+    if request.method == "GET":
+        forms.Deconnexion(request)
+        return HttpResponseRedirect(reverse("connexion"))
 
 def commandes(request):
     return render(request, "listProduit.html")
