@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, get_user_model, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from pythonCode import panier as pan
-from pythonCode.forms import UserLoginForm, UserRegisterForm
+from pythonCode import forms
 
 def index(request):
     return HttpResponse("Alors, on a le covid?")
@@ -25,7 +25,7 @@ def connexion(request):
             HttpResponseRedirect(reverse("connexion"))
             
     
-def insciption(request):
+def inscription(request):
     if request.method == "POST":
         test = forms.Inscription(request)
         if(test):
