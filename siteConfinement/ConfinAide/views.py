@@ -17,14 +17,15 @@ def panier(request):
         return render(request, "panier.html")
         
 def connexion(request):
+    test = forms.Verification(request)
     if request.method == "POST":
-        test = forms.Verification(request)
-        if(test):
+        if test:
             return HttpResponseRedirect(reverse("commandes"))
         else:
             return HttpResponseRedirect(reverse("connexion"))
     if request.method == "GET":
-        return render(request, "connexion.html")
+        if test: return HttpResponseRedirect(reverse("commandes"))
+        else: return render(request, "connexion.html")
             
     
 def inscription(request):
