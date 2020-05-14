@@ -69,7 +69,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="eau">
                             </form>
@@ -94,7 +94,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="pate">
                             </form>
@@ -121,7 +121,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="0" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="0" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="riz">
                             </form>
@@ -146,7 +146,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="farine">
                             </form>
@@ -171,7 +171,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="savon">
                             </form>
@@ -198,7 +198,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="lingette">
                             </form>
@@ -223,7 +223,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="cereale">
                             </form>
@@ -248,7 +248,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="sucre">
                             </form>
@@ -275,7 +275,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="semoule">
                             </form>
@@ -300,7 +300,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="sel">
                             </form>
@@ -325,7 +325,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="huile">
                             </form>
@@ -352,7 +352,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="laitpoudre">
                             </form>
@@ -377,7 +377,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="gateau">
                             </form>
@@ -402,7 +402,7 @@
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
                                 </div>
                                 <input type="hidden" name="p" value="legume">
                             </form>
