@@ -20,9 +20,9 @@ def connexion(request):
     if request.method == "POST":
         test = forms.Verification(request)
         if(test):
-            HttpResponseRedirect(reverse("commandes"))
+            return HttpResponseRedirect(reverse("commandes"))
         else:
-            HttpResponseRedirect(reverse("connexion"))
+            return HttpResponseRedirect(reverse("connexion"))
     if request.method == "GET":
         return render(request, "connexion.html")
             
