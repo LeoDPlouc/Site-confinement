@@ -40,7 +40,7 @@
                     <div class="product-rating"></div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="product-description">GrandLait Bio Demi-écrémé 6x1L<br><br></p>
+                            <p class="product-description">Grand Lait Bio Demi-écrémé 6x1L<br><br></p>
                             <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
                                 <div class="row">
                                     <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
@@ -66,11 +66,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Eau de source plate Cristaline 1,5L,&nbsp;<br>Pack 6 bouteilles<br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="eau">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="eau">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -89,11 +91,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">PANZANI - Coquillettes&nbsp;<br>Sachet de 500gr<br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="pate">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="pate">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -114,11 +118,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">1Kg de riz uncle ben's<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="0" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="riz">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="0" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="riz">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -137,12 +143,14 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Farine de blé T45 Francine&nbsp;<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="farine">
+                            </form>
                         </div>
-                        <input type="hidden" name="p" value="farine">
                     </div>
                 </div>
             </div>
@@ -160,11 +168,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Savon de marseille 100Gr<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="savon">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="savon">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -185,11 +195,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">3x72 Lingettes Sanytol<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="lingette">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="lingette">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -208,11 +220,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Céréales pétales de blé complet<br>Boîte de 300Gr</p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="cereale">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="cereale">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -231,11 +245,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Sucre blanc 900Gr Daddy<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="sucre">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="sucre">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -256,11 +272,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">1Kg de semoule tipiak<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="semoule">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="semoule">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -279,11 +297,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">1Kg de Sel La Baleine<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="sel">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="sel">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -302,11 +322,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">1L D'huiles Puget<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="huile">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="huile">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -327,11 +349,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Pour bébé, 1Kg 800Gr Gallia<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="laitpoudre">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="laitpoudre">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -350,11 +374,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Sachet de Gateaux breton&nbsp;<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="gateau">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="gateau">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -373,11 +399,13 @@
                     <div class="row">
                         <div class="col-12">
                             <p class="product-description">Conserve de légumes (Haricot vert, Petits pois, Carotte)<br><br></p>
-                            <div class="row">
-                                <div class="col-6"><button class="btn btn-light" type="button">Ajouter au panier</button></div>
-                                <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" id="quantite" class="quantity" min="1" placeholder="0"></div>
-                            </div>
-                            <input type="hidden" name="p" value="legume">
+                            <form action="/ConfinAide/panier/" method="POST">{% csrf_token %}
+                                <div class="row">
+                                    <div class="col-6"><button class="btn btn-light" type="submit">Ajouter au panier</button></div>
+                                    <div class="col-6"><label class="quantity">Quantité :&nbsp;</label><input type="number" name="q" id="quantite" class="quantity" min="1" placeholder="0"></div>
+                                </div>
+                                <input type="hidden" name="p" value="legume">
+                            </form>
                         </div>
                     </div>
                 </div>

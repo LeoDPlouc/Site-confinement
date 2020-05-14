@@ -9,7 +9,8 @@ urlpatterns = [
     path('inscription/', views.inscription, name='inscription'),
     path('deconnexion/', views.deconnexion, name='deconnexion'),
     path('commandes/', views.commandes, name='commandes'),
-    path('panier/',views.panier, name='panier')
+    path('panier/',views.panier, name='panier'),
+    path('delPanier/', views.delPanier, name='delPanier')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
