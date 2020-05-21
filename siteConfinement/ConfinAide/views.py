@@ -32,8 +32,7 @@ def connexion(request):
             return HttpResponseRedirect(reverse("connexion"))
     if request.method == "GET":
         if test: return HttpResponseRedirect(reverse("commandes"))
-        else: return render(request, "connexion.html")
-            
+        else: return render(request, "connexion.html")            
     
 def inscription(request):
     if request.method == "POST":
@@ -51,7 +50,19 @@ def deconnexion(request):
         return HttpResponseRedirect(reverse("connexion"))
 
 def commandes(request):
-    return render(request, "listProduit.html")
+    c = list()
+    e = list()
+    i = 0
+    for p in ["legume", "gateau", "laitpoudre", "huile", "sel", "semoule", "sucre", "cereale", "lingette", "savon", "farine", "riz", "pate", "eau", "lait"]:
+            if i == 3:
+                i = 0
+                c.append(e)
+                e = list()
+
+            produit = Produit.objects.get(name=p)
+            e.append({"name": p , "namePretty" : produit.name_Pretty, "prix": produit.prix , "desc" : produit.desc})
+            i += 1
+    return render(request, "listProduit.html", {"produits" : c})
 
 def delPanier(request):
     pan.Delete(request)
