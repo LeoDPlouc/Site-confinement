@@ -66,6 +66,8 @@ def commandes(request):
     if request.method == "POST":
         if commande.Validation(request):
             return HttpResponseRedirect(reverse("panier"))
+        else:
+            return HttpResponse("Echec de la commande")
 
 def delPanier(request):
     pan.Delete(request)

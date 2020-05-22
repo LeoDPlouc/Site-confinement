@@ -44,7 +44,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col text-center"><button class="btn btn-primary" type="button">Passer la commande</button></div>
+        <div class="col text-center">
+        <form action="/ConfinAide/commandes/" method="POST">{% csrf_token %}
+            <button class="btn btn-primary" type="submit">Passer la commande</button></div>
+        </form>
     </div>
     <script src="{% static 'assets/js/jquery.min.js'%}"></script>
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js'%}"></script>
