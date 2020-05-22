@@ -44,4 +44,6 @@ Windows:
 PathToProject> py manage.py createsuperuser
 ```
 
-Une fois ceci fait il sufit de suivre les instructions
+Une fois ceci fait il sufit de suivre les instructions et de se connecter dans l'interface d'administration: `localhost:8000/admin/`
+
+Depuis cette interface vous pouvez ajouter/supprimer un produit, ajouter/supprimer un client, approuver ou refuser un commande très facilement.
