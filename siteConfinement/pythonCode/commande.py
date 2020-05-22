@@ -1,19 +1,27 @@
 
-from ConfinAide.models import Client, commande_produit
+from ConfinAide.models import Client, commande_produit, Produit, DicoProduce
 
 def Validation(request):
     mail = request.session.get("id_mail",None)
     password = request.session.get("id_password",None)
     if(mail==None or password==None): return False
     
-    id_client = (Client.objects.filter(mail=mail,password=password)).id_client
-    produits = ["legume","gateau","laitpoudre","huile","sel","semoule","sucre","cereale","lingette","savon","farine","riz","pate","eau","lait"]
+    client = Client.objects.get(mail=mail,password=password)
+    produits = [o.name for o in Produit.objects.all()]
+    
+    commande = commande_produit(id_client = client)
+    commande.save()
+
     for p in produits:
-        tmp = request.session.get(p,0)
-        while(tmp>0):
-            new_commande = commande_produit(id_produit =p, id_client = id_client)
-            new_commande.save()
-            tmp=tmp-1
+        produit = Produit.objects.get(name=p)
+        q = request.session.get(p,0)
+
+        dicoProd = DicoProduce(id_produce=produit, quantity=q)
+        dicoProd.save()
+
+        commande.name_produit.add(dicoProd)
+
+        request.session[p] = 0
     return True
             
             
