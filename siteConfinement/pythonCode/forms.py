@@ -1,8 +1,4 @@
-from django.http import HttpRequest
-from django.contrib.auth import authenticate, login, get_user_model
-from django import forms
 from ConfinAide.models import Client
-
 
 
 def Verification(request):
@@ -41,20 +37,3 @@ def Deconnexion(request):
     request.session["id_mail"] = None
     request.session["id_password"] = None
     
-
-
-
-
-
-#def Connexion(request):
-#    username = request.POST['email']
-#    password = request.POST['password']
-#    user = authenticate(request, username=username, password=password)
-#    if user is not None:
-#        login(request, user)
-        # Redirect to a success page.
-#        ...
-#    else:
-        # Return an 'invalid login' error message.
-#        ...
-
