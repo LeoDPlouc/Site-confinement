@@ -2,8 +2,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from pythonCode import panier as pan, forms, commande, statistique
-from .models import Produit
+from pythonCode import panier as pan, forms, commande
+from .models import Produit, Client, commande_produit, DicoProduce
 
 def index(request):
     return HttpResponse("Alors, on a le covid?")
@@ -74,7 +74,21 @@ def delPanier(request):
     return HttpResponseRedirect(reverse("panier"))
 
 def statistique(request):
-    return render(request, "stats.html")
+    if request.method == "GET":
+        c = list()
+        c1 = 0
+        c2 = len(Client.objects.all())
+        c3 = 0
+        c4 = len(commande_produit.objects.all())
+        
+        for i in [o.NbrPersonnes for o in Client.objects.all()]:
+            c1+=i+1
+        for i in [o.name_produit for o in commande_produit.objects.all()]:
+            quant = DicoProduce.objects.get(id_produce=i).quantity
+            c3+=quant
+        c3=c3/c4
+        c.append({"NbrPersonnes": c1 , "NbrAdresses" : c2, "NbrProduits": c3 , "NbrLivraisons" : c4})
+        return render(request, "stats.html", c)
 
 def commandes_specifique(request):
     return HttpResponse("Page en construction <a href='/ConfinAide/commandes/'>retour liste des produits</a>")
