@@ -17,7 +17,7 @@ class Produit(models.Model):
     
 class commande_produit(models.Model):
     id_commande_produit = models.BigIntegerField(primary_key = True)
-    name_produit = models.ForeignKey(Produit, on_delete = models.CASCADE)
+    name_produit = models.ManyToManyField(Produit)
     id_client = models.ForeignKey(Client, on_delete = models.CASCADE)
     confirm = models.BooleanField(default = False)
     description = models.CharField(max_length = 20)
