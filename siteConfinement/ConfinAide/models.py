@@ -8,16 +8,34 @@ class Client(models.Model):
     prenom = models.CharField(max_length = 20, null=True)
     tel = models.CharField(max_length = 20, null = True)
     adresse = models.CharField(max_length = 20, null = True)
+    def __str__(self):
+        return self.adresse
+
     
 class Produit(models.Model):
     name = models.CharField(primary_key = True, max_length = 20)
     name_Pretty = models.CharField(max_length = 50)
     prix = models.FloatField()
     desc = models.CharField(max_length = 250)
-    
+    def __str__(self):
+        return self.name_Pretty
+
+class DicoProduce(models.Model):
+    id_dico = models.BigIntegerField(primary_key = True)
+    id_produce = models.ForeignKey(Produit, on_delete = models.CASCADE)
+    quantity = models.IntegerField()
+    def __str__(self):
+        return str(str(self.id_produce)+" x"+str(self.quantity))
+
+STATUS_CHOICES = [
+    ('w', 'En attente'),
+    ('v', 'Validée'),
+    ('r', 'Rejetée'),
+]
+
 class commande_produit(models.Model):
     id_commande_produit = models.BigIntegerField(primary_key = True)
-    name_produit = models.ManyToManyField(Produit)
+    name_produit = models.ManyToManyField(DicoProduce)
     id_client = models.ForeignKey(Client, on_delete = models.CASCADE)
-    confirm = models.BooleanField(default = False)
+    confirm = models.CharField(default = "En attente",max_length=30, choices=STATUS_CHOICES)
     description = models.CharField(max_length = 20)
