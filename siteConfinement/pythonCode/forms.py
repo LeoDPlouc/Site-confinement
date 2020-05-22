@@ -1,7 +1,5 @@
 from django.http import HttpRequest
-from django.contrib.auth import authenticate, login, get_user_model
-from django import forms
-from ConfinAide.models import Client
+from .models import Client
 
 
 
