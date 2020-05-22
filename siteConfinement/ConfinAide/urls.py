@@ -11,7 +11,8 @@ urlpatterns = [
     path('commandes/', views.commandes, name='commandes'),
     path('panier/',views.panier, name='panier'),
     path('delPanier/', views.delPanier, name='delPanier'),
-    path('commandes_specifique/', views.commandes_specifique, name='commandes_specifique')
+    path('commandes_specifique/', views.commandes_specifique, name='commandes_specifique'),
+    path('statistique/', views.statistique, name='statistique')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
