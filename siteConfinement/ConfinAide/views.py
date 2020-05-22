@@ -69,3 +69,6 @@ def commandes(request):
 def delPanier(request):
     pan.Delete(request)
     return HttpResponseRedirect(reverse("panier"))
+
+def commandes_specifique(request):
+    return HttpResponse("Page en construction <a href='/ConfinAide/commandes/'>retour liste des produits</a>")
