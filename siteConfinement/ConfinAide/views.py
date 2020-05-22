@@ -67,7 +67,7 @@ def commandes(request):
         if commande.Validation(request):
             return HttpResponseRedirect(reverse("panier"))
         else:
-            return HttpResponse("Echec de la commande<br><a href='ConfinAide/Panier/'>Retour au panier</a>")
+            return HttpResponse("Echec de la commande<br><a href='/ConfinAide/panier/'>Retour au panier</a>")
 
 def delPanier(request):
     pan.Delete(request)
@@ -80,11 +80,12 @@ def statistique(request):
         c3 = 0
         c4 = len(commande_produit.objects.all())
         
-        for i in [o.NbrPersonnes for o in Client.objects.all()]:
-            c1+=i+1
-        for i in [o.name_produit for o in commande_produit.objects.all()]:
-            quant = DicoProduce.objects.get(id_produce=i).quantity
-            c3+=quant
+        for i in [o.nbr_personne for o in Client.objects.all()]:
+            c1+=int(i)+1
+        for cp in commande_produit.objects.all():
+            for i in cp.name_produit.all():
+                quant = i.quantity
+                c3+=quant
         if (c4!=0):
             c3=c3/c4
         return render(request, "stats.html", {"NbrPersonnes": c1 , "NbrAdresses" : c2, "NbrProduits": c3 , "NbrLivraisons" : c4})
