@@ -1,7 +1,7 @@
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-import ConfinAide.views as views
+import siteConfinement.ConfinAide.views as views
 
 urlpatterns = [
     path('', views.index, name='index'),
