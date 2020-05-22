@@ -1,4 +1,4 @@
-from siteConfinement.ConfinAide.models import Client
+from ConfinAide.models import Client
 
 
 def Verification(request):
