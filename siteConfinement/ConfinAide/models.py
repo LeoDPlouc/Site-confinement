@@ -1,7 +1,7 @@
 from django.db import models
 
 class Client(models.Model):
-    id_client = models.BigIntegerField(primary_key=True)
+    id_client = models.AutoField(primary_key=True, )
     password = models.CharField(max_length = 20)
     mail = models.CharField(max_length = 50)
     nom = models.CharField(max_length = 20, null = True)
@@ -10,13 +10,14 @@ class Client(models.Model):
     adresse = models.CharField(max_length = 20, null = True)
     
 class Produit(models.Model):
-    id_produit = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length = 20)
-    type = models.CharField(max_length = 20, null = True)
+    name = models.CharField(primary_key = True, max_length = 20)
+    name_Pretty = models.CharField(max_length = 50)
+    prix = models.FloatField()
+    desc = models.CharField(max_length = 250)
     
 class commande_produit(models.Model):
     id_commande_produit = models.BigIntegerField(primary_key = True)
-    id_produit = models.ForeignKey(Produit, on_delete = models.CASCADE)
+    name_produit = models.ManyToManyField(Produit)
     id_client = models.ForeignKey(Client, on_delete = models.CASCADE)
     confirm = models.BooleanField(default = False)
     description = models.CharField(max_length = 20)
