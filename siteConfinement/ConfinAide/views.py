@@ -67,7 +67,7 @@ def commandes(request):
         if commande.Validation(request):
             return HttpResponseRedirect(reverse("panier"))
         else:
-            return HttpResponse("Echec de la commande")
+            return HttpResponse("Echec de la commande<br><a href='ConfinAide/Panier/'>Retour au panier</a>")
 
 def delPanier(request):
     pan.Delete(request)

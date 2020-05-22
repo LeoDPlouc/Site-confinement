@@ -20,6 +20,8 @@ def Validation(request):
         dicoProd.save()
 
         commande.name_produit.add(dicoProd)
+
+        request.session[p] = 0
     return True
             
             
