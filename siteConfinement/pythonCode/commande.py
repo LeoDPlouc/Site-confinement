@@ -1,5 +1,5 @@
-from django.http import HttpRequest
-from models import Client, commande_produit
+
+from ConfinAide.models import Client, commande_produit
 
 def Validation(request):
     mail = request.session.get("id_mail",None)
