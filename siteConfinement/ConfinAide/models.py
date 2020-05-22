@@ -8,6 +8,7 @@ class Client(models.Model):
     prenom = models.CharField(max_length = 20, null=True)
     tel = models.CharField(max_length = 20, null = True)
     adresse = models.CharField(max_length = 20, null = True)
+    nbr_personne = models.CharField(max_length=2, null=True)
     
 class Produit(models.Model):
     name = models.CharField(primary_key = True, max_length = 20)

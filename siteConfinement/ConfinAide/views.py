@@ -1,11 +1,8 @@
 
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, get_user_model, login, logout
+from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from pythonCode import panier as pan
-from pythonCode import forms
-from django.template import Context
+from pythonCode import panier as pan, forms, commande
 from .models import Produit
 
 def index(request):
