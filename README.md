@@ -1,6 +1,6 @@
 # ConfinAide
 
-ConfinAide est une platerforme permettant aux famille de signaler leur besoin en nourriture
+ConfinAide est une platerforme permettant aux familles de signaler leurs besoins en nourriture
 
 ## Installation
 
