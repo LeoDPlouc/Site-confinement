@@ -86,7 +86,8 @@ def statistique(request):
         for i in [o.name_produit for o in commande_produit.objects.all()]:
             quant = DicoProduce.objects.get(id_produce=i).quantity
             c3+=quant
-        c3=c3/c4
+        if (c4!=0):
+            c3=c3/c4
         c.append({"NbrPersonnes": c1 , "NbrAdresses" : c2, "NbrProduits": c3 , "NbrLivraisons" : c4})
         return render(request, "stats.html", c)
 
