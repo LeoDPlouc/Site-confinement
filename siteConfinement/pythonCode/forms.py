@@ -1,8 +1,4 @@
-from django.http import HttpRequest
-from django.contrib.auth import authenticate, login, get_user_model
-from django import forms
 from ConfinAide.models import Client
-
 
 
 def Verification(request):
@@ -25,11 +21,12 @@ def Inscription (request):
     tel = request.POST["name-input-field"]
     password = request.POST["password-input-field"]
     password2 = request.POST["repeat-password-field"]
+    nbr_personne = request.POST["nbrpeople"]
     
     if(password!=password2):
         return False
     else:
-        new_client = Client(nom=name,prenom=first_name,mail=mail,adresse=adress,tel=tel,password=password)
+        new_client = Client(nom=name,prenom=first_name,mail=mail,adresse=adress,tel=tel,password=password,nbr_personne=nbr_personne)
         new_client.save()
         request.session["id_mail"]=str(mail)
         request.session["id_password"]=str(password)
@@ -40,20 +37,3 @@ def Deconnexion(request):
     request.session["id_mail"] = None
     request.session["id_password"] = None
     
-
-
-
-
-
-#def Connexion(request):
-#    username = request.POST['email']
-#    password = request.POST['password']
-#    user = authenticate(request, username=username, password=password)
-#    if user is not None:
-#        login(request, user)
-        # Redirect to a success page.
-#        ...
-#    else:
-        # Return an 'invalid login' error message.
-#        ...
-
