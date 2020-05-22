@@ -6,7 +6,7 @@ from pythonCode import panier as pan, forms, commande
 from .models import Produit, Client, commande_produit, DicoProduce
 
 def index(request):
-    return HttpResponse("Alors, on a le covid?")
+    return HttpResponseRedirect('/ConfinAide/connexion')
 
 def panier(request):
     if request.method == "POST":
