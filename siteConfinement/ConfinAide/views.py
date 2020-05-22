@@ -47,21 +47,25 @@ def deconnexion(request):
         return HttpResponseRedirect(reverse("connexion"))
 
 def commandes(request):
-    c = list()
-    e = list()
-    i = 0
-    
-    for p in [o.name for o in Produit.objects.all()]:
-            if i == 3:
-                i = 0
-                c.append(e)
-                e = list()
+    if request.method == "GET":
+        c = list()
+        e = list()
+        i = 0
+        
+        for p in [o.name for o in Produit.objects.all()]:
+                if i == 3:
+                    i = 0
+                    c.append(e)
+                    e = list()
 
-            produit = Produit.objects.get(name=p)
-            e.append({"name": p , "namePretty" : produit.name_Pretty, "prix": produit.prix , "desc" : produit.desc})
-            i += 1
-    if e not in c : c.append(e)
-    return render(request, "listProduit.html", {"produits" : c})
+                produit = Produit.objects.get(name=p)
+                e.append({"name": p , "namePretty" : produit.name_Pretty, "prix": produit.prix , "desc" : produit.desc})
+                i += 1
+        if e not in c : c.append(e)
+        return render(request, "listProduit.html", {"produits" : c})
+    if request.method == "POST":
+        if commande.Validation(request):
+            return HttpResponseRedirect(reverse("panier"))
 
 def delPanier(request):
     pan.Delete(request)
