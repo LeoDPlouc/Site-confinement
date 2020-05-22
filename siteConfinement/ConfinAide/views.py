@@ -75,7 +75,6 @@ def delPanier(request):
 
 def statistique(request):
     if request.method == "GET":
-        c = list()
         c1 = 0
         c2 = len(Client.objects.all())
         c3 = 0
@@ -88,8 +87,7 @@ def statistique(request):
             c3+=quant
         if (c4!=0):
             c3=c3/c4
-        c.append({"NbrPersonnes": c1 , "NbrAdresses" : c2, "NbrProduits": c3 , "NbrLivraisons" : c4})
-        return render(request, "stats.html", c)
+        return render(request, "stats.html", {"NbrPersonnes": c1 , "NbrAdresses" : c2, "NbrProduits": c3 , "NbrLivraisons" : c4})
 
 def commandes_specifique(request):
     return HttpResponse("Page en construction <a href='/ConfinAide/commandes/'>retour liste des produits</a>")
